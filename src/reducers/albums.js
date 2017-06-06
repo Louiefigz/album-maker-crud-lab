@@ -15,16 +15,3 @@ export function findAlbum( album, id){
   let albumId = album.filter((r)=> r.id === id)
   return albumId
 }
-
-// export function findAlbumsongs(state=[], action){
-//   debugger
-//   switch (action.type) {
-//     case 'FIND_ASSOCIATED':
-//     debugger
-//     default:
-//       return state;
-//   }
-//   // return songs.find(function(ingredient){
-//   //   return ingredient.id === id
-//   // })
-// }

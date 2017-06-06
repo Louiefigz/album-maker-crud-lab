@@ -19,6 +19,7 @@ export class AlbumsInput extends Component {
   handleOnSubmit(event){
 
     event.preventDefault()
+    // let album = Object.assign({}, this.state)
     this.props.addAlbum(this.state);
     this.setState({
       name: ''

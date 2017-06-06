@@ -17,11 +17,22 @@ export default function songs(state = initialState, action){
         })
       }
     case "DELETE_SONG":
-      // insert your delete method.
-
+      const deletedObj = state.songs.filter((ing) => ing.id !== action.payload.id);
+      return Object.assign({}, state, {
+        songs: deletedObj
+      })
     case "UPDATE_SONG":
 
-    // insert your update method. 
+    const updatedItems = state.songs.map(item => {
+      if(item.id === action.payload.id){
+        return { ...item, ...action.payload }
+      }
+        return item
+      })
+
+      return Object.assign({}, state, {
+        songs: updatedItems
+      })
 
     default:
       return state;

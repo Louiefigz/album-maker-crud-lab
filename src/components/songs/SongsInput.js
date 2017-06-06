@@ -4,8 +4,7 @@ import { connect } from 'react-redux'
 // We're binding the createSong function from action
 // and making it available as a prop for this component.
 import { bindActionCreators } from 'redux';
-//insert the createSong function from action
-import {  } from '../../actions/songs';
+import { createSong } from '../../actions/songs';
 
 export class songsInput extends Component {
   constructor(props){
@@ -44,9 +43,6 @@ export class songsInput extends Component {
 export const ConnectedSongsInput = connect(null, mapDispatchToProps)(songsInput)
 
 function mapDispatchToProps(dispatch){
-  // Add bindActionCreators here.
-  // ex. return bindActionCreators({
-  //  propsNameForCreate: actionNameForCreate
-  //  }, dispatch)
-
+  return bindActionCreators({
+    createSong: createSong}, dispatch)
 }
