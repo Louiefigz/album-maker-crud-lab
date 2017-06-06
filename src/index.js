@@ -22,3 +22,5 @@ ReactDOM.render(
     </Router>
   </Provider>,
   document.getElementById('root'));
+
+store.dispatch({'type': "CREATE_SONG", 'action': [] })

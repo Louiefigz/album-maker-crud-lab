@@ -9,9 +9,10 @@ export default function songs(state = initialState, action){
       let song = Object.assign({}, action.payload, {id: uuidV4()})
       if (state[0]!== undefined){
         return Object.assign({}, state[0], {
-          songs: state[0].songs.concat([song])
+          songs: []
         })
       } else {
+        debugger
         return Object.assign({}, state, {
           songs: state.songs.concat([song])
         })
